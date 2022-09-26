@@ -1,0 +1,32 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "4cbac74c05977ca7bf43d2043cf50194fad3f1ad50061cc711aa5bb426e94f7f"
+build_start_time: [1664172837, 677490949]
+build_end_time: [1664172841, 302983045]
+inputs:
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/AppDelegate.swift": !dirty [1664166625, 434476852]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/CartTableViewCell.swift": !dirty [1664124799, 939339637]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/CartViewController.swift": !dirty [1664124799, 919546604]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/CategoryCollectionViewCell.swift": !dirty [1664133605, 51696538]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/CategoryDescriptionViewController.swift": !dirty [1664122557, 36063671]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/CategoryTableViewCell.swift": !dirty [1664095050, 75519084]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/CategoryViewController.swift": !dirty [1664120632, 214463710]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/DBOperations.swift": !dirty [1664110179, 490952491]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/DashboardViewController.swift": !dirty [1664051868, 976425647]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/KeyChainOperations.swift": !dirty [1664113506, 167223215]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/LocalNotificationViewController.swift": !dirty [1664129262, 145969390]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/LocationViewController.swift": !dirty [1664127012, 330397605]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/LoginViewController.swift": !dirty [1664172640, 577986955]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/OrderTableViewCell.swift": !dirty [1663950232, 390897274]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/SceneDelegate.swift": !dirty [1663743669, 202922582]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/SignUpViewController.swift": !dirty [1664114599, 459062099]
+  "/Users/capgemini-da078/Documents/Sprint 2/Sprint 2/TextFieldValidation.swift": !dirty [1663763010, 140485763]
+  ? "/Users/capgemini-da078/Documents/Sprint 2/build/Sprint 2.build/Release-iphoneos/Sprint 2.build/DerivedSources/CoreDataGenerated/Sprint_2/Cart+CoreDataClass.swift"
+  : !dirty [1664172837, 596153736]
+  ? "/Users/capgemini-da078/Documents/Sprint 2/build/Sprint 2.build/Release-iphoneos/Sprint 2.build/DerivedSources/CoreDataGenerated/Sprint_2/Cart+CoreDataProperties.swift"
+  : !dirty [1664172837, 596935749]
+  ? "/Users/capgemini-da078/Documents/Sprint 2/build/Sprint 2.build/Release-iphoneos/Sprint 2.build/DerivedSources/CoreDataGenerated/Sprint_2/Sprint_2+CoreDataModel.swift"
+  : !dirty [1664172837, 593973159]
+  ? "/Users/capgemini-da078/Documents/Sprint 2/build/Sprint 2.build/Release-iphoneos/Sprint 2.build/DerivedSources/CoreDataGenerated/Sprint_2/User+CoreDataClass.swift"
+  : !dirty [1664172837, 598849773]
+  ? "/Users/capgemini-da078/Documents/Sprint 2/build/Sprint 2.build/Release-iphoneos/Sprint 2.build/DerivedSources/CoreDataGenerated/Sprint_2/User+CoreDataProperties.swift"
+  : !dirty [1664172837, 600579500]
