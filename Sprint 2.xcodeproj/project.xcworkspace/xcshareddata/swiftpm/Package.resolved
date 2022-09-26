@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "UIColorHexSwift",
+        "repositoryURL": "https://github.com/yeahdongcn/UIColor-Hex-Swift",
+        "state": {
+          "branch": "master",
+          "revision": "47e08d1ec7802c6e8ea0a1bac0516b250d29de05",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
