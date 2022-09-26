@@ -40,4 +40,13 @@ class LocalNotificationViewController: UIViewController, UNUserNotificationCente
         notification.orderPlaced()
     }
     
+    //MARK: Did Receive Notification Function
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        let order = storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
+        self.navigationController?.pushViewController(order, animated: true)
+        
+        completionHandler()
+    }
+
 }

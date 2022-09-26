@@ -420,7 +420,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIy-rj-p9W">
-                                <rect key="frame" x="20" y="44" width="45.5" height="40"/>
+                                <rect key="frame" x="0.0" y="44" width="45.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="SBy-UA-NSu"/>
                                 </constraints>
@@ -436,13 +436,14 @@
                         <color key="tintColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="CW0-1d-b6N" firstAttribute="leading" secondItem="dl1-m5-R7l" secondAttribute="leadingMargin" id="42Y-lf-ltj"/>
+                            <constraint firstItem="VBP-Cv-hRY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZIy-rj-p9W" secondAttribute="trailing" symbolic="YES" id="PzG-Oq-6eM"/>
                             <constraint firstItem="ZIy-rj-p9W" firstAttribute="top" secondItem="VBP-Cv-hRY" secondAttribute="top" id="XH4-5T-PeF"/>
                             <constraint firstItem="tpK-gP-7tG" firstAttribute="bottom" secondItem="VBP-Cv-hRY" secondAttribute="bottom" id="Yrf-eT-fCb"/>
                             <constraint firstItem="tpK-gP-7tG" firstAttribute="leading" secondItem="VBP-Cv-hRY" secondAttribute="leading" id="aGE-p4-8Z0"/>
                             <constraint firstItem="VBP-Cv-hRY" firstAttribute="trailing" secondItem="tpK-gP-7tG" secondAttribute="trailing" id="fFw-Nz-cid"/>
                             <constraint firstItem="tpK-gP-7tG" firstAttribute="top" secondItem="CW0-1d-b6N" secondAttribute="bottom" constant="20" id="sXp-xN-kSC"/>
                             <constraint firstItem="CW0-1d-b6N" firstAttribute="top" secondItem="dl1-m5-R7l" secondAttribute="topMargin" id="ta5-8u-voS"/>
-                            <constraint firstItem="ZIy-rj-p9W" firstAttribute="leading" secondItem="VBP-Cv-hRY" secondAttribute="leading" constant="20" id="upl-Km-bTg"/>
+                            <constraint firstItem="ZIy-rj-p9W" firstAttribute="leading" secondItem="VBP-Cv-hRY" secondAttribute="leading" id="upl-Km-bTg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CW0-1d-b6N" secondAttribute="trailing" id="wKs-mi-quP"/>
                         </constraints>
                     </view>
