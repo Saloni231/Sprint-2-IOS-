@@ -26,6 +26,8 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var addToBagBtn: UIButton!
     
+    @IBOutlet weak var orderBtn: UIButton!
+    
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +50,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //MARK: Function call for fetching data for cart
     func callFetchCartRecord() {
         
-        //Checking If cart is empty for particular user
+        //Checking If cart is empty for particular user and no order is placed
         if DBOperations.dbOperationInstance().fetchCartRecord(userEmail: (Auth.auth().currentUser?.email)!) != nil {
             
             //Hidding empty cart View
@@ -57,15 +59,31 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             //Fetching data
             cartItem = DBOperations.dbOperationInstance().fetchCartRecord(userEmail: (Auth.auth().currentUser?.email)!)!
             
+            //Table view
             cartTableView.dataSource = self
             cartTableView.delegate = self
             cartTableView.reloadData()
             
+            //No of item in table
             noOfItemLabel.text = String(cartItem.count) + " Item selected for order"
         }
+        //Checking if cart is empty for particular user and order is placed
+        else if DBOperations.dbOperationInstance().fetchCartRecordForOrderScreen(userEmail: (Auth.auth().currentUser?.email)!) != nil {
+            
+            //showing order screen button
+            orderBtn.isHidden = false
+            
+            //Showing empty cart screen
+            emptyCartView.isHidden = false
+        }
+        //If cart is empty for particular user and order is not placed
         else {
             
+            //showing empty cart screen
             emptyCartView.isHidden = false
+            
+            //Hidding order screen button
+            orderBtn.isHidden = true
         }
     }
     
@@ -107,5 +125,12 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction func backToCartPressed(_ segue: UIStoryboardSegue) {
 
     }
-
+    
+    //MARK: Order Button Pressed
+    @IBAction func orderBtnPressed(_ sender: Any) {
+        
+        let order = storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
+        self.navigationController?.pushViewController(order, animated: true)
+    }
+    
 }

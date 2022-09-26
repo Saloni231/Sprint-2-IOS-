@@ -109,6 +109,9 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, MKMap
         //Updating Cart Table for placed order
         DBOperations.dbOperationInstance().orderPlaced(userEmail: (Auth.auth().currentUser?.email)!)
         
+        //Storing User Location
+        DBOperations.dbOperationInstance().storeLocation(email: (Auth.auth().currentUser?.email)!, latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        
         let localNotif = self.storyboard?.instantiateViewController(withIdentifier: "LocalNotificationViewController") as! LocalNotificationViewController
         self.navigationController?.pushViewController(localNotif, animated: true)
     }

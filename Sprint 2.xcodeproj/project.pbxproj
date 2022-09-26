@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11C82F786310B311E402D8BB /* Pods_Sprint_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714655184DD4B4F9A72C8637 /* Pods_Sprint_2.framework */; };
+		366AB12228E1958C00143132 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366AB12128E1958C00143132 /* OrdersViewController.swift */; };
 		3670D9EB28E052EA00A14382 /* localNotificationFramwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3670D9E828E052C900A14382 /* localNotificationFramwork.framework */; };
 		3670D9EC28E052EA00A14382 /* localNotificationFramwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3670D9E828E052C900A14382 /* localNotificationFramwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		367B435428E049680036BF29 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B435228E049680036BF29 /* CategoryTableViewCell.swift */; };
@@ -104,6 +105,7 @@
 /* Begin PBXFileReference section */
 		0BFD6D5DA138A9F830C1451C /* Pods-Sprint 2-Sprint 2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sprint 2-Sprint 2UITests.debug.xcconfig"; path = "Target Support Files/Pods-Sprint 2-Sprint 2UITests/Pods-Sprint 2-Sprint 2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3642CC5D28DF2D8300DC4C21 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		366AB12128E1958C00143132 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		3670D9E228E052C900A14382 /* localNotificationFramwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = localNotificationFramwork.xcodeproj; path = ../../localNotificationFramwork/localNotificationFramwork.xcodeproj; sourceTree = "<group>"; };
 		367B435228E049680036BF29 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		367B435328E049680036BF29 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				36D7487528DE010A00EC9D83 /* LocationViewController.swift */,
 				36D7487728DE023C00EC9D83 /* OrderTableViewCell.swift */,
 				36BCB82428DF424B001333D0 /* LocalNotificationViewController.swift */,
+				366AB12128E1958C00143132 /* OrdersViewController.swift */,
 				36C1AF1228DB26C200BDE75D /* TextFieldValidation.swift */,
 				36C1AF1E28DB987C00BDE75D /* DBOperations.swift */,
 				36C1AF1628DB3F3900BDE75D /* KeyChainOperations.swift */,
@@ -594,6 +597,7 @@
 				36C1AEEA28DAEE3500BDE75D /* Sprint_2.xcdatamodeld in Sources */,
 				36C1AEE228DAEE3500BDE75D /* SceneDelegate.swift in Sources */,
 				36C1AF1D28DB947900BDE75D /* CartViewController.swift in Sources */,
+				366AB12228E1958C00143132 /* OrdersViewController.swift in Sources */,
 				36C1AF1328DB26C200BDE75D /* TextFieldValidation.swift in Sources */,
 				36BAB77928E06F77004501FB /* CartTableViewCell.swift in Sources */,
 				36BCB83128DF8239001333D0 /* CategoryCollectionViewCell.swift in Sources */,

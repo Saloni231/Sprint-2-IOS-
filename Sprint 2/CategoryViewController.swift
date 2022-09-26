@@ -32,6 +32,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     //MARK: View Will Appear
     override func viewWillAppear(_ animated: Bool) {
         
+        //showing bottom bar 
         self.tabBarController?.tabBar.isHidden = false
         
         // Function call for fetching data

@@ -32,6 +32,8 @@ class DBOperations: NSObject {
         user.email = email
         user.mobile = mobile
         user.password = password
+        user.location_latitude = 0
+        user.location_longitude = 0
         
         do {
             
@@ -95,6 +97,37 @@ class DBOperations: NSObject {
         }
     }
     
+    //MARK: Storing User location after order placed
+    func storeLocation(email: String, latitude: Double, longitude: Double) {
+        
+        let managedObject = AppDelegate.sharedAppDelegateInstance().persistentContainer.viewContext
+        
+        let locRequest : NSFetchRequest<User> = User.fetchRequest()
+        locRequest.returnsObjectsAsFaults = false
+        
+        let locPredicate = NSPredicate(format: "email MATCHES %@", email)
+        locRequest.predicate = locPredicate
+        
+        do {
+            
+            let record = try managedObject.fetch(locRequest)
+            
+            let user = record[0]
+            
+            user.location_latitude = latitude
+            user.location_longitude = longitude
+            
+            do {
+                try managedObject.save()
+            } catch (let error) {
+                print(error.localizedDescription)
+            }
+        } catch (let error) {
+            
+            print(error.localizedDescription)
+        }
+    }
+    
     // Saving new password
     func newPassword(email: String, password: String) {
         
@@ -144,7 +177,7 @@ class DBOperations: NSObject {
         }
     }
     
-    //MARK: Fetching Data from Cart Entity
+    //MARK: Fetching Data from Cart Entity for order not placed
     func fetchCartRecord(userEmail: String) -> [Cart]? {
         
         let managedObjectModel = AppDelegate.sharedAppDelegateInstance().persistentContainer.viewContext
@@ -172,6 +205,34 @@ class DBOperations: NSObject {
         }
     }
     
+    //MARK: Fetching Data from Cart Entity for order placed
+    func fetchCartRecordForOrderScreen(userEmail: String) -> [Cart]? {
+        
+        let managedObjectModel = AppDelegate.sharedAppDelegateInstance().persistentContainer.viewContext
+        let request: NSFetchRequest<Cart> = Cart.fetchRequest()
+        request.returnsObjectsAsFaults = false
+        
+        let reqPredicateEmail = NSPredicate(format: "user_email MATCHES %@", userEmail)
+        let reqPredicateOrder = NSPredicate(format: "is_order_Placed = true")
+        
+        let reqPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [reqPredicateEmail,reqPredicateOrder])
+        request.predicate = reqPredicate
+        
+        do {
+            
+            let record = try managedObjectModel.fetch(request)
+            if(record.isEmpty){
+                return nil
+            }
+            else{
+                return record
+            }
+        } catch(_) {
+            
+            fatalError("Failed to fetch record.")
+        }
+    }
+
     //MARK: Deleting All Records from cart entity
     func deleteCartData() {
         

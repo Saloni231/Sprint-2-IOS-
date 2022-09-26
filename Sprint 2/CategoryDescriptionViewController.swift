@@ -41,6 +41,7 @@ class CategoryDescriptionViewController: UIViewController, UICollectionViewDeleg
     //MARK: View Will Appear
     override func viewWillAppear(_ animated: Bool) {
         
+        //Hiding bottom bar
         self.tabBarController?.tabBar.isHidden = true
         
         //Function call for fetching data
