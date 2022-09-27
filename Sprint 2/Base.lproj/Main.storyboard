@@ -67,7 +67,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="U42-WL-VUR"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                         <connections>
                                                             <action selector="usernameCheck:" destination="BYZ-38-t0r" eventType="editingChanged" id="MQG-AI-ozl"/>
                                                             <action selector="usernameValidation:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="1dS-BE-e67"/>
@@ -87,7 +87,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="XqS-yr-yMi"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                         <connections>
                                                             <action selector="passwordCheck:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="okm-yH-LsR"/>
                                                             <action selector="passwordTyped:" destination="BYZ-38-t0r" eventType="editingChanged" id="73v-7Q-1ud"/>
@@ -367,17 +367,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjS-5a-iXh">
-                                <rect key="frame" x="7" y="194" width="400" height="130"/>
+                                <rect key="frame" x="-22" y="194" width="458" height="130"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Female" translatesAutoresizingMaskIntoConstraints="NO" id="sfm-Pn-CYU">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="130"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200.5" height="130"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="130" id="X3u-gL-zCY"/>
                                             <constraint firstAttribute="width" constant="200" id="xYU-Nx-nM1"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgW-10-Giq">
+                                        <rect key="frame" x="200.5" y="0.0" width="57.5" height="130"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Male" translatesAutoresizingMaskIntoConstraints="NO" id="pFs-JA-BEn">
-                                        <rect key="frame" x="200" y="0.0" width="200" height="130"/>
+                                        <rect key="frame" x="258" y="0.0" width="200" height="130"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="130" id="2Fl-jp-JXR"/>
                                             <constraint firstAttribute="width" constant="200" id="koJ-uS-elv"/>
@@ -396,13 +402,13 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="2nQ-zJ-aBn"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="24"/>
+                                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29f-kT-mWV">
                                                 <rect key="frame" x="130" y="0.0" width="220" height="50"/>
-                                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="23"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="23"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -420,13 +426,13 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="RWA-XO-NOe"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="24"/>
+                                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0S-2J-wPG">
                                                 <rect key="frame" x="130" y="0.0" width="220" height="50"/>
-                                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="23"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="23"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -444,13 +450,13 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="fbO-wR-hLf"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="24"/>
+                                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clc-M6-h85">
                                                 <rect key="frame" x="130" y="0.0" width="220" height="50"/>
-                                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="23"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="23"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -510,6 +516,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="Rv9-vg-XbR"/>
                     <connections>
+                        <outlet property="chooseLabel" destination="OgW-10-Giq" id="ogD-kG-UV9"/>
                         <outlet property="email" destination="x0S-2J-wPG" id="INR-cg-wSk"/>
                         <outlet property="femaleProfile" destination="sfm-Pn-CYU" id="mgo-lq-Hc2"/>
                         <outlet property="maleProfile" destination="pFs-JA-BEn" id="sVI-VM-efB"/>
@@ -1165,7 +1172,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="2X0-zh-RnD"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                         <connections>
                                                             <action selector="nameCheck:" destination="TgN-7f-L1p" eventType="editingChanged" id="yuP-Wo-e5c"/>
                                                             <action selector="nameValidation:" destination="TgN-7f-L1p" eventType="editingDidEnd" id="Yhg-ux-UOF"/>
@@ -1183,7 +1190,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="igk-SE-4ap"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                         <connections>
                                                             <action selector="emailCheck:" destination="TgN-7f-L1p" eventType="editingChanged" id="TbU-Fb-KQ9"/>
                                                             <action selector="emailRules:" destination="TgN-7f-L1p" eventType="editingDidBegin" id="vRw-rJ-mfF"/>
@@ -1202,7 +1209,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="9rQ-eX-pQh"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                         <connections>
                                                             <action selector="mobileCheck:" destination="TgN-7f-L1p" eventType="editingChanged" id="Gm3-td-ZF8"/>
                                                             <action selector="mobileRules:" destination="TgN-7f-L1p" eventType="editingDidBegin" id="jUo-sw-PGw"/>
@@ -1221,7 +1228,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="WV8-tZ-Qf0"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="new-password"/>
                                                         <connections>
                                                             <action selector="passwordCheck:" destination="TgN-7f-L1p" eventType="editingChanged" id="0iC-0F-MYY"/>
                                                             <action selector="passwordRules:" destination="TgN-7f-L1p" eventType="editingDidBegin" id="SlG-CS-MXu"/>
@@ -1240,7 +1247,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="jTb-XM-Ekq"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="new-password"/>
                                                         <connections>
                                                             <action selector="confirmPasswordCheck:" destination="TgN-7f-L1p" eventType="editingChanged" id="Zuc-he-ued"/>
                                                             <action selector="confirmPasswordRules:" destination="TgN-7f-L1p" eventType="editingDidBegin" id="7py-SP-Mro"/>

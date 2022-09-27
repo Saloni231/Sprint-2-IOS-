@@ -12,6 +12,7 @@ class ProfileViewController: UIViewController {
     
     //MARK: Outlet Connection
 
+    @IBOutlet weak var chooseLabel: UILabel!
     @IBOutlet weak var femaleProfile: UIImageView!
     @IBOutlet weak var maleProfile: UIImageView!
     @IBOutlet weak var name: UILabel!
@@ -62,12 +63,14 @@ class ProfileViewController: UIViewController {
             
             //hidding female image
             femaleProfile.isHidden = true
+            chooseLabel.isHidden = true
         }
         //Checking if gender is female
         else if(user?.gender == "F") {
             
             //hidding male image
             maleProfile.isHidden = true
+            chooseLabel.isHidden = true
         }
         
     }
@@ -77,6 +80,7 @@ class ProfileViewController: UIViewController {
         
         //Hiding female profile
         femaleProfile.isHidden = true
+        chooseLabel.isHidden = true
         
         //Updating gender for user
         DBOperations.dbOperationInstance().storeGender(email: (Auth.auth().currentUser?.email!)!, gender: "M")
@@ -87,6 +91,7 @@ class ProfileViewController: UIViewController {
         
         //Hiding Male profile
         maleProfile.isHidden = true
+        chooseLabel.isHidden = true
         
         //Updating gender for user
         DBOperations.dbOperationInstance().storeGender(email: (Auth.auth().currentUser?.email!)!, gender: "F")
