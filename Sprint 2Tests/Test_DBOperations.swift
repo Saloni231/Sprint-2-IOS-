@@ -81,10 +81,22 @@ class Test_DBOperations: XCTestCase {
         
         DBOperations.dbOperationInstance().orderPlaced(userEmail: "saloni@gmail.com")
         
-        let record = DBOperations.dbOperationInstance().fetchCartRecord(userEmail: "saloni@gmail.com")
+        let record = DBOperations.dbOperationInstance().fetchCartRecordForOrderScreen(userEmail: "saloni@gmail.com")
         
-        XCTAssertEqual(record?.last?.is_order_Placed, nil,"Order  is not Placed")
+        XCTAssertEqual(record?.last?.is_order_Placed, true,"Order  is not Placed")
     }
+    
+    //MARK: Testing Store gender to user entity
+    func testStoreGender() throws {
+        
+        DBOperations.dbOperationInstance().storeGender(email: "saloni@gmail.com", gender: "F")
+        
+        let record = DBOperations.dbOperationInstance().fetchMatchedRecord(email: "saloni@gmail.com")
+        
+        XCTAssertEqual(record?.gender, "F", "Gender is not stored")
+    }
+    
+    
     
     func testExample() throws {
         

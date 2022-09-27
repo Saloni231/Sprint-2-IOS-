@@ -32,7 +32,7 @@ class Test_LoginView: XCTestCase {
         let emailActionEditingChanged = try XCTUnwrap(email.actions(forTarget: login, forControlEvent: .editingChanged), "Email Text Field has no action for editing changed")
         XCTAssertEqual(emailActionEditingChanged.first, "usernameCheck:", "There is no action assigned on email text field for editing changed")
         
-        XCTAssertEqual(email.placeholder, "Username", "Wrong Placeholder")
+        XCTAssertEqual(email.placeholder, "Email ID", "Wrong Placeholder")
         
         XCTAssertEqual(email.text, "", "Email Text Field is not empty")
     }

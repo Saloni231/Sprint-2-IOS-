@@ -24,8 +24,8 @@ class TestLoginViewUI: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         
-        app.textFields["Username"].tap()
-        app.textFields["Username"].typeText("john@gmail.com")
+        app.textFields["Email ID"].tap()
+        app.textFields["Email ID"].typeText("john@gmail.com")
         
         app.secureTextFields["Password"].tap()
         app.secureTextFields["Password"].typeText("John@1")
@@ -93,6 +93,13 @@ class TestLoginViewUI: XCTestCase {
         
         
         XCTAssert(app.images["emptyCart.gif"].exists, "Failed to load empty cart screen")
+        
+        //MARK: Order View
+        app.buttons["Order"].tap()
+        
+        XCTAssert(app.staticTexts["My Order"].exists, "Failed to load order view")
+        
+        
         
         
     }

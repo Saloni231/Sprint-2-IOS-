@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11C82F786310B311E402D8BB /* Pods_Sprint_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714655184DD4B4F9A72C8637 /* Pods_Sprint_2.framework */; };
+		360E9C4228E2CB230093D0D4 /* Test_OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E9C4128E2CB230093D0D4 /* Test_OrderView.swift */; };
 		36608A7F28E207260014C0CE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36608A7E28E207260014C0CE /* ProfileViewController.swift */; };
 		366AB12228E1958C00143132 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366AB12128E1958C00143132 /* OrdersViewController.swift */; };
 		3670D9EB28E052EA00A14382 /* localNotificationFramwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3670D9E828E052C900A14382 /* localNotificationFramwork.framework */; };
@@ -105,6 +106,7 @@
 
 /* Begin PBXFileReference section */
 		0BFD6D5DA138A9F830C1451C /* Pods-Sprint 2-Sprint 2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sprint 2-Sprint 2UITests.debug.xcconfig"; path = "Target Support Files/Pods-Sprint 2-Sprint 2UITests/Pods-Sprint 2-Sprint 2UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		360E9C4128E2CB230093D0D4 /* Test_OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_OrderView.swift; sourceTree = "<group>"; };
 		3642CC5D28DF2D8300DC4C21 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		36608A7E28E207260014C0CE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		366AB12128E1958C00143132 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				36BAB78B28E0B720004501FB /* Test_CartView.swift */,
 				36BAB78D28E0BF62004501FB /* Test_Location.swift */,
 				36BAB78F28E0CE60004501FB /* Test_localNotificationView.swift */,
+				360E9C4128E2CB230093D0D4 /* Test_OrderView.swift */,
 			);
 			path = "Sprint 2Tests";
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				36BAB78028E07C8D004501FB /* Test_DBOperations.swift in Sources */,
 				36C1AEFA28DAEE3600BDE75D /* Sprint_2Tests.swift in Sources */,
 				36BAB78228E088CB004501FB /* Test_KeyChainOperation.swift in Sources */,
+				360E9C4228E2CB230093D0D4 /* Test_OrderView.swift in Sources */,
 				36BAB78828E09898004501FB /* Test_CategoryListView.swift in Sources */,
 				36BAB79028E0CE60004501FB /* Test_localNotificationView.swift in Sources */,
 			);
