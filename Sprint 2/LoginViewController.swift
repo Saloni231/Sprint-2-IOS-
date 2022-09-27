@@ -51,6 +51,10 @@ class LoginViewController: UIViewController {
         //Hiding Error Message
         usernameErrorMsg.isHidden = true
         passwordErrorMsg.isHidden = true
+        
+        //resetting text fields
+        usernameTextField.text = ""
+        passwordTextField.text = ""
     }
     
     //MARK: Username Text Field Validation

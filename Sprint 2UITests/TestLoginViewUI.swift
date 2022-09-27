@@ -44,6 +44,14 @@ class TestLoginViewUI: XCTestCase {
         
         XCTAssert(app.staticTexts["Laptops"].exists, "Failed to load categories description view")
         
+        //MARK: Testing Product Description view
+        app.collectionViews.cells.staticTexts["Macbook Pro"].tap()
+        
+        XCTAssert(app.staticTexts["Apple"].exists, "Failed to load Product description view")
+        
+        app.buttons["chevron.backward.2"].tap()
+        
+        //adding item to cart
         app.collectionViews.cells.containing(.staticText, identifier: "Macbook Pro").buttons["shopping cart"].tap()
         
         //MARK: Item Added to cart Alert choosing continue shopping option

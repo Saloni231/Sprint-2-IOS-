@@ -68,8 +68,14 @@ class CategoryDescriptionViewController: UIViewController, UICollectionViewDeleg
             }
         })
     }
-}
+    
+    //MARK: Back Segue
+    // Coming Back to Category Description View
+    @IBAction func backToCategoryDescPressed(_ segue: UIStoryboardSegue) {
+        
+    }
 
+}
 extension CategoryDescriptionViewController: UICollectionViewDelegateFlowLayout {
     
     //MARK: Number of rows in section function
@@ -95,29 +101,9 @@ extension CategoryDescriptionViewController: UICollectionViewDelegateFlowLayout 
         //Item Description
         item.itemDescription.text = (itemData[indexPath.row + 1]["description"] as? String)?.capitalized
         
-        //API Call for thumbnil
-        Alamofire.request("https://dummyjson.com/image/i/products/"+String((itemData[indexPath.row + 1]["id"] as? Int)!)+"/thumbnail.jpg").responseJSON(completionHandler: { response in
-            if (String(data: response.data!, encoding: .utf8)) != "not found!" {
-                item.itemImage.image = UIImage(data: response.data!)
-            }
-        })
-        
-        Alamofire.request("https://dummyjson.com/image/i/products/"+String((itemData[indexPath.row + 1]["id"] as? Int)!)+"/thumbnail.jpeg").responseJSON(completionHandler: { response in
-            if (String(data: response.data!, encoding: .utf8)) != "not found!" {
-                item.itemImage.image = UIImage(data: response.data!)
-            }
-        })
-
-        Alamofire.request("https://dummyjson.com/image/i/products/"+String((itemData[indexPath.row + 1]["id"] as? Int)!)+"/thumbnail.png").responseJSON(completionHandler: { response in
-            if (String(data: response.data!, encoding: .utf8)) != "not found!" {
-                item.itemImage.image = UIImage(data: response.data!)
-            }
-        })
-        
-        Alamofire.request("https://dummyjson.com/image/i/products/"+String((itemData[indexPath.row + 1]["id"] as? Int)!)+"/thumbnail.webp").responseJSON(completionHandler: { response in
-            if (String(data: response.data!, encoding: .utf8)) != "not found!" {
-                item.itemImage.image = UIImage(data: response.data!)
-            }
+        //API Call for thumbnail
+        Alamofire.request(itemData[indexPath.row + 1]["thumbnail"] as! String).responseJSON(completionHandler: { response in
+            item.itemImage.image = UIImage(data: response.data!)
         })
         
         return item
@@ -126,6 +112,14 @@ extension CategoryDescriptionViewController: UICollectionViewDelegateFlowLayout 
     //MARK: Size for each cell function
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: 190.0, height: 400.0)
+        return CGSize(width: 190.0, height: 450.0)
+    }
+    
+    //MARK: Did Select row function
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let product = self.storyboard?.instantiateViewController(withIdentifier: "ProductDescriptionViewController") as! ProductDescriptionViewController
+        product.productData = itemData[indexPath.row + 1]
+        self.navigationController?.pushViewController(product, animated: true)
     }
 }

@@ -24,11 +24,24 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    //MARK: View Will Appear
+    override func viewWillAppear(_ animated: Bool) {
+        
+        //calling function for profile image
+        profileImage()
+    }
+    
+    //MARK: Function for setting profile image
+    func profileImage() {
+        
         //fetching data from user entity
         let user = DBOperations.dbOperationInstance().fetchMatchedRecord(email: (Auth.auth().currentUser?.email)!)
         
-        name.text = user?.name
-        email.text = user?.email
+        //Assigning Values
+        name.text = (user?.name)?.capitalized
+        email.text = (user?.email)?.capitalized
         mobile.text = user?.mobile
         
         //Checking if user gender is selected
@@ -59,11 +72,6 @@ class ProfileViewController: UIViewController {
         
     }
     
-    //MARK: View Will Appear
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    
     //MARK: User tapped on Male image
     @objc func maleImage() {
         
@@ -83,5 +91,20 @@ class ProfileViewController: UIViewController {
         //Updating gender for user
         DBOperations.dbOperationInstance().storeGender(email: (Auth.auth().currentUser?.email!)!, gender: "F")
     }
-
+    
+    //MARK: Sign Out
+    @IBAction func signOutClicked(_ sender: Any) {
+        
+        do {
+            //Signing out of firebase
+            try Auth.auth().signOut()
+            
+            //Navigating back to login view
+            self.navigationController?.popToRootViewController(animated: true)
+        } catch(let error) {
+            
+            print(error.localizedDescription)
+        }
+    }
+    
 }

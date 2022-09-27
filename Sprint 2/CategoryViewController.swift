@@ -25,8 +25,6 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         // Registering row for table view
         categoryTableView.register(UINib(nibName: "CategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "category")
         
-        jsonAPICall()
-
     }
     
     //MARK: View Will Appear
