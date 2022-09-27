@@ -32,8 +32,7 @@ class DBOperations: NSObject {
         user.email = email
         user.mobile = mobile
         user.password = password
-        user.location_latitude = 0
-        user.location_longitude = 0
+        user.gender = "NA"
         
         do {
             
@@ -97,25 +96,25 @@ class DBOperations: NSObject {
         }
     }
     
-    //MARK: Storing User location after order placed
-    func storeLocation(email: String, latitude: Double, longitude: Double) {
+    
+    //MARK: Storing User gender
+    func storeGender(email: String, gender: String) {
         
         let managedObject = AppDelegate.sharedAppDelegateInstance().persistentContainer.viewContext
         
-        let locRequest : NSFetchRequest<User> = User.fetchRequest()
-        locRequest.returnsObjectsAsFaults = false
+        let genRequest : NSFetchRequest<User> = User.fetchRequest()
+        genRequest.returnsObjectsAsFaults = false
         
-        let locPredicate = NSPredicate(format: "email MATCHES %@", email)
-        locRequest.predicate = locPredicate
+        let genPredicate = NSPredicate(format: "email MATCHES %@", email)
+        genRequest.predicate = genPredicate
         
         do {
             
-            let record = try managedObject.fetch(locRequest)
+            let record = try managedObject.fetch(genRequest)
             
             let user = record[0]
             
-            user.location_latitude = latitude
-            user.location_longitude = longitude
+            user.gender = gender
             
             do {
                 try managedObject.save()
@@ -124,32 +123,6 @@ class DBOperations: NSObject {
             }
         } catch (let error) {
             
-            print(error.localizedDescription)
-        }
-    }
-    
-    // Saving new password
-    func newPassword(email: String, password: String) {
-        
-        let managedObjectPassword = AppDelegate.sharedAppDelegateInstance().persistentContainer.viewContext
-        let request : NSFetchRequest<User> = User.fetchRequest()
-        request.returnsObjectsAsFaults = false
-        
-        let reqPredicate = NSPredicate(format: "emailID MATCHES %@", email)
-        request.predicate = reqPredicate
-        
-        do{
-            let data = try managedObjectPassword.fetch(request)
-            for i in 0..<data.count {
-                let obj = data[i]
-                obj.password = password
-            }
-            do {
-                try managedObjectPassword.save()
-            } catch (let error) {
-                print(error.localizedDescription)
-            }
-        } catch(let error) {
             print(error.localizedDescription)
         }
     }
