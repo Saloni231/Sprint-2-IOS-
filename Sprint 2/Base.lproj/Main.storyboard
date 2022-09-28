@@ -467,21 +467,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1n-A1-pNW">
-                                <rect key="frame" x="0.0" y="64" width="64" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="5nQ-vY-Odw"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward.2" catalog="system">
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="Ngc-4c-scm" kind="unwind" unwindAction="backToOrderPressed:" id="OWh-n0-Dac"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DqN-bQ-t8v">
-                                <rect key="frame" x="347" y="64" width="67" height="50"/>
+                                <rect key="frame" x="364.5" y="64" width="49.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6uW-MD-TvM"/>
                                 </constraints>
@@ -498,19 +485,16 @@
                         <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" systemColor="labelColor"/>
                         <constraints>
+                            <constraint firstItem="DqN-bQ-t8v" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6O3-2t-Ebe" secondAttribute="trailing" constant="0.5" id="Iby-TF-2dS"/>
                             <constraint firstItem="Dew-zx-YKL" firstAttribute="trailing" secondItem="6O3-2t-Ebe" secondAttribute="trailing" constant="50" id="Qcc-ea-pYk"/>
                             <constraint firstItem="DqN-bQ-t8v" firstAttribute="top" secondItem="Dew-zx-YKL" secondAttribute="top" constant="20" id="Zy4-vc-ELM"/>
                             <constraint firstItem="gjS-5a-iXh" firstAttribute="centerX" secondItem="Dew-zx-YKL" secondAttribute="centerX" id="cxw-wY-InQ"/>
                             <constraint firstItem="Dew-zx-YKL" firstAttribute="trailing" secondItem="DqN-bQ-t8v" secondAttribute="trailing" id="d6E-t3-LKa"/>
                             <constraint firstItem="6O3-2t-Ebe" firstAttribute="leading" secondItem="Dew-zx-YKL" secondAttribute="leading" constant="50" id="jOF-CC-0wh"/>
-                            <constraint firstItem="DqN-bQ-t8v" firstAttribute="leading" secondItem="K1n-A1-pNW" secondAttribute="trailing" constant="283" id="mjc-4o-shS"/>
-                            <constraint firstItem="Dew-zx-YKL" firstAttribute="trailing" secondItem="K1n-A1-pNW" secondAttribute="trailing" constant="350" id="qga-f4-R8y"/>
                             <constraint firstItem="3vw-Yc-v23" firstAttribute="centerX" secondItem="Dew-zx-YKL" secondAttribute="centerX" id="rMh-K9-F3l"/>
-                            <constraint firstItem="K1n-A1-pNW" firstAttribute="top" secondItem="Dew-zx-YKL" secondAttribute="top" constant="20" id="tBc-pP-iv8"/>
                             <constraint firstItem="gjS-5a-iXh" firstAttribute="top" secondItem="6O3-2t-Ebe" secondAttribute="bottom" constant="50" id="uec-Vv-Twl"/>
                             <constraint firstItem="3vw-Yc-v23" firstAttribute="top" secondItem="gjS-5a-iXh" secondAttribute="bottom" constant="50" id="viH-Oi-z2p"/>
                             <constraint firstItem="6O3-2t-Ebe" firstAttribute="top" secondItem="Dew-zx-YKL" secondAttribute="top" constant="50" id="vzn-fe-St7"/>
-                            <constraint firstItem="K1n-A1-pNW" firstAttribute="leading" secondItem="Dew-zx-YKL" secondAttribute="leading" id="xNj-qe-kEu"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="Rv9-vg-XbR"/>
@@ -524,7 +508,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjM-j2-Jjo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="Ngc-4c-scm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1042" y="2808"/>
         </scene>
