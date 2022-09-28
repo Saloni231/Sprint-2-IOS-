@@ -38,7 +38,7 @@ class ProfileViewController: UIViewController {
     func profileImage() {
         
         //fetching data from user entity
-        let user = DBOperations.dbOperationInstance().fetchMatchedRecord(email: (Auth.auth().currentUser?.email)!)
+        let user = DBOperations.dbOperationInstance().fetchMatchedRecord(email: ((Auth.auth().currentUser?.email)?.lowercased())!)
         
         //Assigning Values
         name.text = (user?.name)?.capitalized

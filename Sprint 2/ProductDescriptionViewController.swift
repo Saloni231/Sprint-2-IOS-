@@ -74,7 +74,7 @@ class ProductDescriptionViewController: UIViewController {
         productDescription.text = (productData["description"] as? String)?.capitalized
         productPrice.text = "$ \(String((productData["price"] as? Int)!))"
         
-        let animateImage = UIImage.animatedImage(with: images, duration: 20)
+        let animateImage = UIImage.animatedImage(with: images, duration: 10)
         productImages = UIImageView(image: animateImage)
         productImages.frame = CGRect(x: 40, y: 20, width: contentView.frame.width-80, height: 400)
         self.contentView.addSubview(productImages)
