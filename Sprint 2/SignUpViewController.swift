@@ -340,7 +340,7 @@ class SignUpViewController: UIViewController {
                 if error == nil {
                     
                     //MARK: Storing data in core data
-                    DBOperations.dbOperationInstance().insertDataToUser(name: nameTextField.text!, email: emailTextField.text!, mobile: mobileTextField.text!, password: passwordTextField.text!)
+                    DBOperations.dbOperationInstance().insertDataToUser(name: nameTextField.text!, email: emailTextField.text!.lowercased(), mobile: mobileTextField.text!, password: passwordTextField.text!)
                     
                     //MARK: Success Alert
                     let successAlert = UIAlertController(title: "Sign Up Success!!", message: "User Created Successfully.", preferredStyle: .alert)
