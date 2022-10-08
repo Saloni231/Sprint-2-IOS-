@@ -14,7 +14,7 @@ class PlacedOrderTableCell: UITableViewCell {
     //MARK: Outlet Connection
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemName: UILabel!
-    
+    @IBOutlet weak var itemDesc: UILabel!
 }
 
 class OrdersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -65,6 +65,7 @@ class OrdersViewController: UIViewController, UITableViewDataSource, UITableView
         
         item.itemName.text = order[indexPath.row].product_name
         item.itemImage.image = UIImage(data: order[indexPath.row].product_image!)
+        item.itemDesc.text = order[indexPath.row].product_desecription
         
         return item
         
@@ -73,7 +74,7 @@ class OrdersViewController: UIViewController, UITableViewDataSource, UITableView
     //MARK: Height for cell function
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 120.0
+        return 200.0
     }
     
     //MARK: Back Segue

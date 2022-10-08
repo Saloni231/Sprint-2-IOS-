@@ -98,9 +98,12 @@ extension CategoryDescriptionViewController: UICollectionViewDelegateFlowLayout 
         //Item Name
         item.itemName.text = (itemData[indexPath.row + 1]["title"] as? String)?.capitalized
         
+        //Item Price
+        item.itemPrice.text = "$ \(String((itemData[indexPath.row + 1]["price"] as? Int)!))"
+        
         //Item Description
         item.itemDescription.text = (itemData[indexPath.row + 1]["description"] as? String)?.capitalized
-        
+
         //API Call for thumbnail
         Alamofire.request(itemData[indexPath.row + 1]["thumbnail"] as! String).responseJSON(completionHandler: { response in
             item.itemImage.image = UIImage(data: response.data!)
@@ -112,7 +115,7 @@ extension CategoryDescriptionViewController: UICollectionViewDelegateFlowLayout 
     //MARK: Size for each cell function
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: 190.0, height: 450.0)
+        return CGSize(width: 190.0, height: 500.0)
     }
     
     //MARK: Did Select row function

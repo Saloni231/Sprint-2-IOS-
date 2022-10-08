@@ -27,5 +27,7 @@
 	<string>Application Need Location Permission</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Application Need Location Permission</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string></string>
 </dict>
 </plist>

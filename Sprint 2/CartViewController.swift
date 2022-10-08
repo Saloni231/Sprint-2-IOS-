@@ -101,7 +101,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         item.parentVC = self
         
         item.itemName.text = cartItem[indexPath.row].product_name
-        item.itemDescription.text = cartItem[indexPath.row].product_desecription
+        item.itemPrice.text = cartItem[indexPath.row].product_price
         item.itemImage.image = UIImage(data: cartItem[indexPath.row].product_image!)
         
         return item
@@ -109,7 +109,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     //MARK: Height for row function
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 230.0
+        return 150.0
     }
     
     //MARK: Add to Bag Button Clicked Navigating to Location Confirmation

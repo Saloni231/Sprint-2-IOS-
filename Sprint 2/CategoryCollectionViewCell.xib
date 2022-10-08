@@ -10,10 +10,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="items" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="Sprint_2" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="190" height="450"/>
+            <rect key="frame" x="0.0" y="0.0" width="190" height="500"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="190" height="450"/>
+                <rect key="frame" x="0.0" y="0.0" width="190" height="500"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WXE-EP-F7n">
@@ -54,8 +54,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGA-Vv-E5D">
-                        <rect key="frame" x="10" y="222" width="170" height="22"/>
-                        <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="13"/>
+                        <rect key="frame" x="10" y="217" width="170" height="32"/>
+                        <fontDescription key="fontDescription" name="MuktaMahee-Bold" family="Mukta Mahee" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ic-3V-e6V">
+                        <rect key="frame" x="10" y="254" width="170" height="20"/>
+                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -68,10 +74,13 @@
                 <constraint firstItem="BOJ-wO-VaQ" firstAttribute="top" secondItem="WXE-EP-F7n" secondAttribute="bottom" constant="10" id="2ew-5a-k78"/>
                 <constraint firstItem="WXE-EP-F7n" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Brc-wg-zgf"/>
                 <constraint firstAttribute="trailing" secondItem="fGA-Vv-E5D" secondAttribute="trailing" constant="10" id="HAQ-jf-VnX"/>
+                <constraint firstItem="7Ic-3V-e6V" firstAttribute="top" secondItem="fGA-Vv-E5D" secondAttribute="bottom" constant="5" id="IP9-c9-cPN"/>
                 <constraint firstItem="fGA-Vv-E5D" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="MAt-28-YQg"/>
+                <constraint firstAttribute="trailing" secondItem="7Ic-3V-e6V" secondAttribute="trailing" constant="10" id="PiF-mW-OAu"/>
                 <constraint firstItem="WXE-EP-F7n" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Qr0-ZD-Q2q"/>
                 <constraint firstAttribute="trailing" secondItem="sUe-h8-rre" secondAttribute="trailing" constant="10" id="XJv-KQ-bMv"/>
-                <constraint firstItem="fGA-Vv-E5D" firstAttribute="top" secondItem="j2Z-yp-5b1" secondAttribute="bottom" constant="10" id="f8P-Y0-kdZ"/>
+                <constraint firstItem="7Ic-3V-e6V" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="c7V-nt-91c"/>
+                <constraint firstItem="fGA-Vv-E5D" firstAttribute="top" secondItem="j2Z-yp-5b1" secondAttribute="bottom" constant="5" id="f8P-Y0-kdZ"/>
                 <constraint firstItem="j2Z-yp-5b1" firstAttribute="top" secondItem="WXE-EP-F7n" secondAttribute="bottom" constant="10" id="iSX-Q4-JLa"/>
                 <constraint firstAttribute="trailing" secondItem="WXE-EP-F7n" secondAttribute="trailing" constant="10" id="mgx-y1-kiR"/>
                 <constraint firstItem="sUe-h8-rre" firstAttribute="top" secondItem="WXE-EP-F7n" secondAttribute="bottom" constant="10" id="uRj-xd-Jv5"/>
@@ -80,9 +89,10 @@
             <connections>
                 <outlet property="addToCart" destination="sUe-h8-rre" id="iNg-zP-qdD"/>
                 <outlet property="addedToCart" destination="BOJ-wO-VaQ" id="eob-Qm-IL2"/>
-                <outlet property="itemDescription" destination="fGA-Vv-E5D" id="KSn-cN-ghh"/>
+                <outlet property="itemDescription" destination="7Ic-3V-e6V" id="wei-1I-Jho"/>
                 <outlet property="itemImage" destination="WXE-EP-F7n" id="Qba-4H-Qht"/>
                 <outlet property="itemName" destination="j2Z-yp-5b1" id="ZVG-Fj-8nS"/>
+                <outlet property="itemPrice" destination="fGA-Vv-E5D" id="PPz-pn-RHe"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="87.723214285714278"/>
         </collectionViewCell>

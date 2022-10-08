@@ -5,6 +5,7 @@
         <attribute name="product_desecription" optional="YES" attributeType="String"/>
         <attribute name="product_image" optional="YES" attributeType="Binary"/>
         <attribute name="product_name" optional="YES" attributeType="String"/>
+        <attribute name="product_price" optional="YES" attributeType="String"/>
         <attribute name="user_email" optional="YES" attributeType="String"/>
         <relationship name="cart_to_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="user_to_cart" inverseEntity="User"/>
     </entity>
@@ -14,10 +15,11 @@
         <attribute name="mobile" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="profileImage" optional="YES" attributeType="Binary"/>
         <relationship name="user_to_cart" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cart" inverseName="cart_to_user" inverseEntity="Cart"/>
     </entity>
     <elements>
-        <element name="Cart" positionX="-54" positionY="18" width="128" height="119"/>
-        <element name="User" positionX="-562" positionY="-10" width="128" height="119"/>
+        <element name="Cart" positionX="-54" positionY="18" width="128" height="134"/>
+        <element name="User" positionX="-562" positionY="-10" width="128" height="134"/>
     </elements>
 </model>

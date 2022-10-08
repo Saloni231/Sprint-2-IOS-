@@ -16,10 +16,11 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     //MARK: Outlet Connection
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemImage: UIImageView!
-    @IBOutlet weak var itemDescription: UILabel!
+    @IBOutlet weak var itemPrice: UILabel!
     
     @IBOutlet weak var addedToCart: UIImageView!
     @IBOutlet weak var addToCart: UIButton!
+    @IBOutlet weak var itemDescription: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,7 +35,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         addToCart.isHidden = true
         
         //Storing data in cart entity
-        DBOperations.dbOperationInstance().insertDataToCart(userEmail: (Auth.auth().currentUser?.email)!, productName: itemName.text!, productImage: (itemImage.image?.pngData())!, productDesc: itemDescription.text!)
+        DBOperations.dbOperationInstance().insertDataToCart(userEmail: (Auth.auth().currentUser?.email)!, productName: itemName.text!, productImage: (itemImage.image?.pngData())!, productPrice: itemPrice.text!, prodDesc: itemDescription.text!)
         
         //calling alert
         cartSuccessAlert()

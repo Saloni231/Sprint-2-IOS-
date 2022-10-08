@@ -127,8 +127,41 @@ class DBOperations: NSObject {
         }
     }
     
+    //MARK: Stroing User Profile Picture
+    func storeProfileToUser(email: String, profileImage: Data) {
+        
+        let managedObject = AppDelegate.sharedAppDelegateInstance().persistentContainer.viewContext
+        
+        let profileRequest : NSFetchRequest<User> = User.fetchRequest()
+        profileRequest.returnsObjectsAsFaults = false
+        
+        let profilePredicate = NSPredicate(format: "email MATCHES %@", email)
+        profileRequest.predicate = profilePredicate
+        
+        do {
+            
+            let record = try managedObject.fetch(profileRequest)
+            
+            let user = record[0]
+            
+            user.profileImage = profileImage
+            
+            do {
+                
+                try managedObject.save()
+            } catch(let error) {
+                
+                print(error.localizedDescription)
+            }
+        } catch(let error) {
+            
+            print(error.localizedDescription)
+        }
+        
+    }
+    
     //MARK: Inserting data into cart entity
-    func insertDataToCart(userEmail: String, productName: String, productImage: Data, productDesc: String) {
+    func insertDataToCart(userEmail: String, productName: String, productImage: Data, productPrice: String, prodDesc: String) {
         
         let managedObject = AppDelegate.sharedAppDelegateInstance().persistentContainer.viewContext
         
@@ -137,7 +170,8 @@ class DBOperations: NSObject {
         cart.user_email = userEmail
         cart.product_name = productName
         cart.product_image = productImage
-        cart.product_desecription = productDesc
+        cart.product_price = productPrice
+        cart.product_desecription = prodDesc
         cart.is_order_Placed = false
         
         do {
