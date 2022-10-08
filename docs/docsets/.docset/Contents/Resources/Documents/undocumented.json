@@ -16,7 +16,7 @@
     },
     {
       "file": "/Users/capgemini-da078/Library/Developer/Xcode/DerivedData/Sprint_2-hacdbebvkppobpfrkqbhfnpxrrgi/Build/Intermediates.noindex/Sprint 2.build/Debug-iphoneos/Sprint 2.build/DerivedSources/CoreDataGenerated/Sprint_2/Cart+CoreDataClass.swift",
-      "line": 30,
+      "line": 29,
       "symbol": "Cart",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
@@ -59,20 +59,13 @@
     {
       "file": "/Users/capgemini-da078/Library/Developer/Xcode/DerivedData/Sprint_2-hacdbebvkppobpfrkqbhfnpxrrgi/Build/Intermediates.noindex/Sprint 2.build/Debug-iphoneos/Sprint 2.build/DerivedSources/CoreDataGenerated/Sprint_2/Cart+CoreDataProperties.swift",
       "line": 24,
-      "symbol": "Cart.product_price",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/capgemini-da078/Library/Developer/Xcode/DerivedData/Sprint_2-hacdbebvkppobpfrkqbhfnpxrrgi/Build/Intermediates.noindex/Sprint 2.build/Debug-iphoneos/Sprint 2.build/DerivedSources/CoreDataGenerated/Sprint_2/Cart+CoreDataProperties.swift",
-      "line": 25,
       "symbol": "Cart.user_email",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/capgemini-da078/Library/Developer/Xcode/DerivedData/Sprint_2-hacdbebvkppobpfrkqbhfnpxrrgi/Build/Intermediates.noindex/Sprint 2.build/Debug-iphoneos/Sprint 2.build/DerivedSources/CoreDataGenerated/Sprint_2/Cart+CoreDataProperties.swift",
-      "line": 26,
+      "line": 25,
       "symbol": "Cart.cart_to_user",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -122,35 +115,35 @@
     {
       "file": "/Users/capgemini-da078/Library/Developer/Xcode/DerivedData/Sprint_2-hacdbebvkppobpfrkqbhfnpxrrgi/Build/Intermediates.noindex/Sprint 2.build/Debug-iphoneos/Sprint 2.build/DerivedSources/CoreDataGenerated/Sprint_2/User+CoreDataProperties.swift",
       "line": 21,
-      "symbol": "User.gender",
+      "symbol": "User.location_latitude",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/capgemini-da078/Library/Developer/Xcode/DerivedData/Sprint_2-hacdbebvkppobpfrkqbhfnpxrrgi/Build/Intermediates.noindex/Sprint 2.build/Debug-iphoneos/Sprint 2.build/DerivedSources/CoreDataGenerated/Sprint_2/User+CoreDataProperties.swift",
       "line": 22,
-      "symbol": "User.mobile",
+      "symbol": "User.location_longitude",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/capgemini-da078/Library/Developer/Xcode/DerivedData/Sprint_2-hacdbebvkppobpfrkqbhfnpxrrgi/Build/Intermediates.noindex/Sprint 2.build/Debug-iphoneos/Sprint 2.build/DerivedSources/CoreDataGenerated/Sprint_2/User+CoreDataProperties.swift",
       "line": 23,
-      "symbol": "User.name",
+      "symbol": "User.mobile",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/capgemini-da078/Library/Developer/Xcode/DerivedData/Sprint_2-hacdbebvkppobpfrkqbhfnpxrrgi/Build/Intermediates.noindex/Sprint 2.build/Debug-iphoneos/Sprint 2.build/DerivedSources/CoreDataGenerated/Sprint_2/User+CoreDataProperties.swift",
       "line": 24,
-      "symbol": "User.password",
+      "symbol": "User.name",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/capgemini-da078/Library/Developer/Xcode/DerivedData/Sprint_2-hacdbebvkppobpfrkqbhfnpxrrgi/Build/Intermediates.noindex/Sprint 2.build/Debug-iphoneos/Sprint 2.build/DerivedSources/CoreDataGenerated/Sprint_2/User+CoreDataProperties.swift",
       "line": 25,
-      "symbol": "User.profileImage",
+      "symbol": "User.password",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },

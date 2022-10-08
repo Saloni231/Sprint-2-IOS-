@@ -13,6 +13,8 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //MARK: Variable decleration
     var cartItem : [Cart] = []
     
+    var amount = 0
+    
     //MARK: Outlet Connection
     
     @IBOutlet weak var cartTitle: UILabel!
@@ -27,6 +29,8 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var addToBagBtn: UIButton!
     
     @IBOutlet weak var orderBtn: UIButton!
+    
+    @IBOutlet weak var totalAmount: UILabel!
     
     //MARK: View Did Load
     override func viewDidLoad() {
@@ -50,11 +54,16 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //MARK: Function call for fetching data for cart
     func callFetchCartRecord() {
         
+        amount = 0
+        
         //Checking If cart is empty for particular user and no order is placed
         if DBOperations.dbOperationInstance().fetchCartRecord(userEmail: (Auth.auth().currentUser?.email)!) != nil {
             
             //Hidding empty cart View
             emptyCartView.isHidden = true
+            
+            //Showing Button View
+            buttonView.isHidden = false
             
             //Fetching data
             cartItem = DBOperations.dbOperationInstance().fetchCartRecord(userEmail: (Auth.auth().currentUser?.email)!)!
@@ -73,6 +82,9 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             //showing order screen button
             orderBtn.isHidden = false
             
+            //Hidding Placed Order Button Screen View
+            buttonView.isHidden = true
+            
             //Showing empty cart screen
             emptyCartView.isHidden = false
         }
@@ -84,6 +96,9 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             //Hidding order screen button
             orderBtn.isHidden = true
+            
+            //Hidding Placed Order Button Screen View
+            buttonView.isHidden = true
         }
     }
     
@@ -101,8 +116,12 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         item.parentVC = self
         
         item.itemName.text = cartItem[indexPath.row].product_name
-        item.itemPrice.text = cartItem[indexPath.row].product_price
+        item.itemPrice.text = "$ \(String(describing: (cartItem[indexPath.row].product_price)!))"
         item.itemImage.image = UIImage(data: cartItem[indexPath.row].product_image!)
+        
+        amount += Int((cartItem[indexPath.row].product_price)!)!
+        
+        totalAmount.text = "$ \(String(amount))"
         
         return item
     }

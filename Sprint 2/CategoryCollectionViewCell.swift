@@ -35,7 +35,8 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         addToCart.isHidden = true
         
         //Storing data in cart entity
-        DBOperations.dbOperationInstance().insertDataToCart(userEmail: (Auth.auth().currentUser?.email)!, productName: itemName.text!, productImage: (itemImage.image?.pngData())!, productPrice: itemPrice.text!, prodDesc: itemDescription.text!)
+        let price = itemPrice.text!.suffix(from: itemPrice.text!.index(itemPrice.text!.endIndex, offsetBy: -(itemPrice.text!.count - 2)))
+        DBOperations.dbOperationInstance().insertDataToCart(userEmail: (Auth.auth().currentUser?.email)!, productName: itemName.text!, productImage: (itemImage.image?.pngData())!, productPrice: String(price), prodDesc: itemDescription.text!)
         
         //calling alert
         cartSuccessAlert()
