@@ -28,6 +28,8 @@ class ProductDescriptionViewController: UIViewController {
     @IBOutlet weak var productDescription: UILabel!
     @IBOutlet weak var productPrice: UILabel!
     
+    @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
+    
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +46,9 @@ class ProductDescriptionViewController: UIViewController {
         
         imagePath = (productData["images"] as? NSArray)!
         
+        contentView.isHidden = true
+        loadingActivityIndicator.startAnimating()
+        
         let count = imagePath.count
         
         for i in 0..<count {
@@ -56,10 +61,13 @@ class ProductDescriptionViewController: UIViewController {
             
                 //if (i == count-1) {
                     
-                    DispatchQueue.main.async {
-                        
-                        self.displayingData()
-                    }
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
+                    
+                    self.displayingData()
+                    self.contentView.isHidden = false
+                    self.loadingActivityIndicator.stopAnimating()
+                    
+                }
                 //}
             })
         }

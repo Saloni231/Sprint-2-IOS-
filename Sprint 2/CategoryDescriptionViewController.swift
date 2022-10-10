@@ -23,6 +23,8 @@ class CategoryDescriptionViewController: UIViewController, UICollectionViewDeleg
     
     @IBOutlet weak var backButton: UIButton!
     
+    @IBOutlet weak var loadingActivity: UIActivityIndicatorView!
+    
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +53,9 @@ class CategoryDescriptionViewController: UIViewController, UICollectionViewDeleg
     //MARK: JSON API Call through Alamorafire for items
     func callingAPI() {
         
+        itemList.isHidden = true
+        loadingActivity.startAnimating()
+        
         Alamofire.request("https://dummyjson.com/products/category/" + itemTitle!).responseJSON(completionHandler: { response in
             
             if let record = (response.result.value as? NSDictionary)!["products"] as? NSArray {
@@ -61,10 +66,12 @@ class CategoryDescriptionViewController: UIViewController, UICollectionViewDeleg
                 }
             }
 
-            DispatchQueue.main.async {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
                 
                 self.itemList.delegate = self
                 self.itemList.dataSource = self
+                self.itemList.isHidden = false
+                self.loadingActivity.stopAnimating()
             }
         })
     }

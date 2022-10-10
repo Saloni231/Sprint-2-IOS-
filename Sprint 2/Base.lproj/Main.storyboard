@@ -912,6 +912,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="AID-sD-aSg">
+                                <rect key="frame" x="0.0" y="104" width="414" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="color" red="0.0" green="0.2666666667" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhe-BA-EjG">
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <constraints>
@@ -935,9 +940,13 @@
                         <viewLayoutGuide key="safeArea" id="ikq-EM-GE6"/>
                         <color key="backgroundColor" red="0.0" green="0.2666666667" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="AID-sD-aSg" firstAttribute="top" secondItem="zhe-BA-EjG" secondAttribute="bottom" id="1IS-3C-Oio"/>
+                            <constraint firstItem="ikq-EM-GE6" firstAttribute="trailing" secondItem="AID-sD-aSg" secondAttribute="trailing" id="2NM-Dw-6L5"/>
                             <constraint firstItem="ZLv-hd-RUj" firstAttribute="width" secondItem="cv8-ch-k0i" secondAttribute="width" id="D6l-Rv-fMW"/>
                             <constraint firstItem="ZLv-hd-RUj" firstAttribute="top" secondItem="zhe-BA-EjG" secondAttribute="bottom" id="Sui-vv-aOi"/>
                             <constraint firstItem="ZLv-hd-RUj" firstAttribute="trailing" secondItem="ikq-EM-GE6" secondAttribute="trailing" id="WvG-Zy-Hm4"/>
+                            <constraint firstItem="ikq-EM-GE6" firstAttribute="bottom" secondItem="AID-sD-aSg" secondAttribute="bottom" id="XbV-xk-Ga2"/>
+                            <constraint firstItem="AID-sD-aSg" firstAttribute="leading" secondItem="ikq-EM-GE6" secondAttribute="leading" id="aCI-H2-wNd"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ZLv-hd-RUj" secondAttribute="bottom" id="kIP-dx-2e9"/>
                             <constraint firstItem="ikq-EM-GE6" firstAttribute="trailing" secondItem="zhe-BA-EjG" secondAttribute="trailing" id="kxm-SI-me9"/>
                             <constraint firstItem="zhe-BA-EjG" firstAttribute="top" secondItem="ikq-EM-GE6" secondAttribute="top" id="kz4-wz-453"/>
@@ -948,6 +957,7 @@
                     <navigationItem key="navigationItem" id="sa1-bM-nAp"/>
                     <connections>
                         <outlet property="CategoriesCollection" destination="ZLv-hd-RUj" id="sUi-tP-F6L"/>
+                        <outlet property="loadingActivity" destination="AID-sD-aSg" id="29I-K4-eRs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kwO-Hg-aND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -962,6 +972,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hoI-3r-lHN">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="color" red="0.96470588239999999" green="0.1647058824" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1r7-z8-pMS">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <constraints>
@@ -1016,12 +1032,13 @@
                         <outlet property="backButton" destination="1gA-9l-2cg" id="dMW-wI-kHl"/>
                         <outlet property="itemList" destination="79F-2B-ZQf" id="Lt2-AU-72V"/>
                         <outlet property="itemPageTitle" destination="1r7-z8-pMS" id="iXn-tu-MDu"/>
+                        <outlet property="loadingActivity" destination="hoI-3r-lHN" id="IPH-24-PLM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O8b-1g-bUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="w3A-Vf-7eJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2761" y="796"/>
+            <point key="canvasLocation" x="2760.8695652173915" y="795.53571428571422"/>
         </scene>
         <!--Product Description View Controller-->
         <scene sceneID="gDb-Ex-07s">
@@ -1044,6 +1061,10 @@
                                     <segue destination="41N-F4-Rg8" kind="unwind" unwindAction="backToCategoryDescPressed:" id="u1U-wZ-RQn"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ote-eJ-N1u">
+                                <rect key="frame" x="0.0" y="102" width="414" height="746"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5K-Ei-2b8">
                                 <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                                 <subviews>
@@ -1103,18 +1124,23 @@
                         <viewLayoutGuide key="safeArea" id="Ych-8G-G8u"/>
                         <color key="backgroundColor" red="1" green="0.73333333333333328" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ote-eJ-N1u" firstAttribute="top" secondItem="9iI-42-hyB" secondAttribute="bottom" constant="8" id="1Z9-g3-wXx"/>
+                            <constraint firstItem="ote-eJ-N1u" firstAttribute="leading" secondItem="Ych-8G-G8u" secondAttribute="leading" id="22R-fU-YXJ"/>
                             <constraint firstItem="jMy-s1-Io0" firstAttribute="width" secondItem="nUt-RL-yaH" secondAttribute="width" id="EeB-3R-X4i"/>
                             <constraint firstItem="Ych-8G-G8u" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9iI-42-hyB" secondAttribute="trailing" symbolic="YES" id="TMO-cJ-num"/>
                             <constraint firstItem="9iI-42-hyB" firstAttribute="leading" secondItem="Ych-8G-G8u" secondAttribute="leading" id="UJ3-HT-5tV"/>
                             <constraint firstItem="d5K-Ei-2b8" firstAttribute="trailing" secondItem="Ych-8G-G8u" secondAttribute="trailing" id="XCi-gb-je1"/>
                             <constraint firstItem="d5K-Ei-2b8" firstAttribute="leading" secondItem="Ych-8G-G8u" secondAttribute="leading" id="aV2-LF-OU9"/>
                             <constraint firstItem="9iI-42-hyB" firstAttribute="top" secondItem="Ych-8G-G8u" secondAttribute="top" id="epC-8F-SsY"/>
+                            <constraint firstItem="ote-eJ-N1u" firstAttribute="trailing" secondItem="Ych-8G-G8u" secondAttribute="trailing" id="h5Q-rp-Avg"/>
                             <constraint firstAttribute="bottomMargin" secondItem="d5K-Ei-2b8" secondAttribute="bottom" id="or6-JZ-KCe"/>
+                            <constraint firstItem="Ych-8G-G8u" firstAttribute="bottom" secondItem="ote-eJ-N1u" secondAttribute="bottom" constant="14" id="p2I-Wv-Vjo"/>
                             <constraint firstItem="d5K-Ei-2b8" firstAttribute="top" secondItem="9iI-42-hyB" secondAttribute="bottom" id="yW6-uz-wja"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="contentView" destination="jMy-s1-Io0" id="14i-p1-uOQ"/>
+                        <outlet property="loadingActivityIndicator" destination="ote-eJ-N1u" id="jep-6z-Jl2"/>
                         <outlet property="productBrand" destination="zjy-rH-S38" id="jGM-z3-09H"/>
                         <outlet property="productDescription" destination="SyF-lu-lAV" id="BF3-1U-QR8"/>
                         <outlet property="productName" destination="vI1-ft-iTA" id="GxG-7e-PIV"/>
@@ -1124,12 +1150,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrT-tk-5gP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="41N-F4-Rg8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3541" y="796"/>
+            <point key="canvasLocation" x="3540.579710144928" y="795.53571428571422"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="bBr-6g-4t1">
             <objects>
-                <tabBarController storyboardIdentifier="DashBoardTabBarController" id="5I5-0v-rzh" customClass="DashboardViewController" customModule="Sprint_2" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="DashBoardTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="5I5-0v-rzh" customClass="DashboardViewController" customModule="Sprint_2" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="2mc-cA-66e"/>
                     <value key="contentSizeForViewInPopover" type="size" width="0.0" height="0.0"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VJx-MB-lMs">

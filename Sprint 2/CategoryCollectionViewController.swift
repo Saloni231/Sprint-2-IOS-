@@ -16,7 +16,8 @@ class CategoryCollectionViewController: UIViewController, UICollectionViewDelega
     //MARK: Outlet Connection
     @IBOutlet weak var CategoriesCollection: UICollectionView!
     
-
+    @IBOutlet weak var loadingActivity: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +39,9 @@ class CategoryCollectionViewController: UIViewController, UICollectionViewDelega
     //MARK: API call for Categories
     func jsonApiCall() {
         
+        CategoriesCollection.isHidden = true
+        loadingActivity.startAnimating()
+        
         Alamofire.request("https://dummyjson.com/products/categories").responseJSON(completionHandler: {
             response in
             
@@ -50,10 +54,12 @@ class CategoryCollectionViewController: UIViewController, UICollectionViewDelega
                     self.categories.add(title as! String)
                 }
                 
-                DispatchQueue.main.async {
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
                     
                     self.CategoriesCollection.delegate = self
                     self.CategoriesCollection.dataSource = self
+                    self.CategoriesCollection.isHidden = false
+                    self.loadingActivity.stopAnimating()
                 }
             }
         })
